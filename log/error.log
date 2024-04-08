@@ -1,0 +1,83 @@
+2024-04-08 09:44:19,341 - /home/varsha/Documents/Projects/fininfocom/employee_REST_API/employee_app/views.py - 63 - views - post - ERROR - {"non_field_errors": ["Missing required field: address"]} - line no: 
+2024-04-08 09:58:25,783 - /home/varsha/Documents/Projects/fininfocom/employee_REST_API/employee_app/views.py - 60 - views - post - ERROR - {"non_field_errors": ["Missing required field: address"]} - serializer.errors
+2024-04-08 10:22:49,136 - /home/varsha/Documents/Projects/fininfocom/employee_REST_API/employee_app/views.py - 60 - views - post - ERROR - {"non_field_errors": ["Missing required field: address"]} - serializer errors
+2024-04-08 10:24:07,604 - /home/varsha/Documents/Projects/fininfocom/employee_REST_API/employee_app/views.py - 64 - views - post - ERROR - Got a `TypeError` when calling `employees.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `employees.objects.create()`. You may need to make the field read-only, or override the EmployeeSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: employees() got unexpected keyword arguments: 'message', 'success'
+ - line no: 58
+2024-04-08 10:24:07,611 [ERROR] [django.request:241] - Internal Server Error: /
+2024-04-08 10:24:07,611 [ERROR] [django.server:212] - "POST / HTTP/1.1" 500 5554
+2024-04-08 10:34:51,976 [ERROR] [django.request:241] - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 439, in _iterencode
+    yield from _iterencode(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 429, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type employees is not JSON serializable
+2024-04-08 10:34:51,978 [ERROR] [django.server:212] - "GET / HTTP/1.1" 500 167752
+2024-04-08 11:50:03,817 - /home/varsha/Documents/Projects/fininfocom/employee_REST_API/employee_app/views.py - 106 - views - delete - ERROR - regid not found - input json format error
+2024-04-08 11:51:17,243 [ERROR] [django.request:241] - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/varsha/Documents/Projects/_env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: EmployeeAPI.delete() missing 1 required positional argument: 'regid'
+2024-04-08 11:51:17,245 [ERROR] [django.server:212] - "DELETE / HTTP/1.1" 500 91172
+2024-04-08 11:51:35,968 - /home/varsha/Documents/Projects/fininfocom/employee_REST_API/employee_app/views.py - 105 - views - delete - ERROR - regid not found - input json format error
+
